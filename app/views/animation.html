@@ -9,7 +9,7 @@
     <ol>
       <li ng-repeat="course in courses" ng-class="isCompleted($index)">
         <div class="track-subchapter">
-          <a href="#" ng-href="{{course.link}}">{{course.courseName}}</a>
+          <a href="#" ng-href="{{course.link}}" ng-click="viewCourse(course, $index)" class="strip">{{course.courseName}}</a>
         </div>
         <aside class="track-timing">{{course.duration}}</aside>
       </li>
