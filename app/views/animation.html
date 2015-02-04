@@ -1,0 +1,18 @@
+<section class="track" ng-controller="AnimationCtrl">
+  <h2 class="track-header">UI Animation</h2>
+  <img src="images/animation.jpg" alt="Animation header image">
+  <p>Learn how to animate the UI in meaningful and delightful ways. Learn the basic principles of motion design and how to include animation in your workflow. </p>
+  <div class="track-progress steps-{{courses.length}}">
+    <span ng-repeat="course in courses" ng-class="isCompleted($index)" class="track-progress-step"></span>
+  </div>
+  <div class="track-sections">
+    <ol>
+      <li ng-repeat="course in courses" ng-class="isCompleted($index)">
+        <div class="track-subchapter">
+          <a href="#" ng-href="{{course.link}}">{{course.courseName}}</a>
+        </div>
+        <aside class="track-timing">{{course.duration}}</aside>
+      </li>
+    </ol>
+  </div>
+</section>
